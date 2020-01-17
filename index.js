@@ -12,8 +12,6 @@ let review_form = document.querySelector('#review-form')
 // Closing the review form 
 close_review_form_btn.addEventListener('click', e=> {
        review_form.style ='display:none;'
-
-       
 })
 
 // Brining up the review form 
@@ -25,16 +23,15 @@ review_button.addEventListener('click', e=>{
 })
 
 // New comment
-review_form.addEventListener('submit', e=> {
- 
+review_form.addEventListener('submit', e => {
+    // debugger
     e.preventDefault()
-    
     let new_comment = e.target.user_review.value
     let new_user = e.target.user_name.value
     let new_rating = e.target.rating_dropdown.value
 
+    console.log('dont refresh')
     // POST fetch for new comment 
-
     fetch(review_url, {
         method: 'POST',
         headers:{
@@ -49,8 +46,9 @@ review_form.addEventListener('submit', e=> {
         })
         })
         .then(res => res.json())
-        .then(console.log)
-
+        .then(obj => {
+            console.log(obj)
+        })
 
 })
 

@@ -10,6 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <!-- raiting icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- w3.css library -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -22,7 +25,9 @@
     </nav>
   <div class="container h-100">
     <div class="d-flex justify-content-center">
+      
              <div class = 'container'>
+              <button id='review-button' class = 'clicked closed'> Leave Review </button>
                  <form id ='review-form' class="w3-container">
                    <label class="w3-text-blue"><b>Review</b></label>
                    <br>
@@ -34,11 +39,12 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                  
+
                    <textarea class="w3-input w3-border" id='user_review' type="text" rows="7" placeholder="leave reviews"></textarea>
                    <label class="w3-text-blue"><b>Username</b></label>
                    <input class="w3-input w3-border" id='user_name' type="text">
                    <button class="w3-btn w3-blue">Submit</button>
+                   <!-- <input type="submit"/> -->
                               <!-- onclick, calling the function inside the html tag -->
                    <button type = 'button' class="w3-btn w3-blue" id='close_form_btn' >Close</button>
 
@@ -46,10 +52,43 @@
               </div>    
     </div>
 
+
+
   <div id ='footer' class ='container '></div>
     <footer>
-      
-      <button id='review-button' class = 'clicked closed'> Leave Review </button>
+      <div class='comment_section'>
+      <div class="row bootstrap snippets"></div>
+        <div class="col-md-6 col-md-offset-2 col-sm-12"></div>
+            <div class="comment-wrapper">
+                <div class="panel panel-info">
+                        <div class="clearfix"></div>
+                        <hr>
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="media-body">
+                                    <strong class="text-success">@MartinoMont</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <div class = 'review_star'>
+                                            <h5>Star Rating</h5>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+  </div>
     </footer>
     
   </div>
